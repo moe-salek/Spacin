@@ -22,4 +22,4 @@ pylint:
 unittest:
   stage: Test
   script:
-    - python -m unittest discover /spacin -d C0114
+    - python -m unittest discover spacin/ -d C0114
