@@ -20,5 +20,5 @@ class Loader:
     @staticmethod
     def load_file(filepath):
         """Load data from file"""
-        with open(filepath, 'r') as f:
-            return f.read().splitlines()
+        with open(filepath, 'r') as file:
+            return file.read().splitlines()
