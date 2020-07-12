@@ -2,13 +2,13 @@ image: "python:3.8"
 
 cache:
   paths:
-    - "$CI_PROJECT_DIR/pip-cache"
-  key: "$CI_PROJECT_ID"
+    - .pip-cache
 
 before_script:
-  - python --version
-  - pip install flake8
-  - pip install pylint
+  - mkdir -p .pip-cache
+  - pip install -U pip
+  - pip --cache-dir=.pip-cache install flake8
+  - pip --cache-dir=.pip-cache install pylint
 
 stages:
   - Static Analysis
