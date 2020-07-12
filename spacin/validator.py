@@ -1,8 +1,9 @@
 class Validator:
+    """Class to validate input"""
 
     def __init__(self):
         self.valid_chars = [chr(val) for val in range(97, 122+1)]  # a-z
-        self.remove_chars = '.,!?/-+@#$%^&*_="\'\\(){}[]:;'
+        self.remove_chars = '.,!?/-+@#$%^&*_="\'\\(){}[]:;' + '0123456789'
 
     def clear_input(self, input_str):
         """Removes the invalid chars and makes it lowercase"""
