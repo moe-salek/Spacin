@@ -2,7 +2,7 @@ image: "python:3.8"
 
 cache:
   paths:
-    - .cache/pip
+    - ~/.cache/pip
 
 before_script:
   - python --version
