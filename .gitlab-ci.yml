@@ -2,7 +2,8 @@ image: "python:3.8"
 
 cache:
   paths:
-    - ~/.cache/pip
+    - "$CI_PROJECT_DIR/pip-cache"
+  key: "$CI_PROJECT_ID"
 
 before_script:
   - python --version
