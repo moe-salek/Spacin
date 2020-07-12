@@ -1,6 +1,7 @@
 from .loader import Loader
 from .validator import Validator
 
+
 class Spacin:
     """Put the damn space(s) between words!"""
 
