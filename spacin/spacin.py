@@ -1,4 +1,4 @@
-from . import Loader
+from .loader import Loader
 
 
 class Spacin:
