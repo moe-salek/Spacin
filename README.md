@@ -1,2 +1,4 @@
 # Spacin
 
+## Install
+```pip install .```
