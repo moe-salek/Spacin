@@ -76,7 +76,7 @@ class BasicAlgorithm(BaseAlgorithm):
             if text.startswith(constr, start_index):
                 entrylist.append(constr)
 
-        if not entrylist:
+        if not entrylist and start_index == len(text):
             results.append(burden)
 
         for entry in entrylist:
