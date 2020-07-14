@@ -57,16 +57,6 @@ class TestBasicAlgorithm(unittest.TestCase):
 
         self.assertListEqual(final_res, ["hello", "friends"])
 
-    def test_filter_result_longest_word(self):
-        """Test to filter the best result by the longest words"""
-        results = [
-            ["thisis", "justatest"],
-            ["thisisjusta", "test"],
-        ]
-        final_res = self.algorithm.filter_result(results)
-
-        self.assertListEqual(final_res, ["thisisjusta", "test"])
-
     def test_deep_with_startswith(self):
         """Test to find correct ways of creating string with its components"""
         text = self.algorithm.validator.clear_input("hell")

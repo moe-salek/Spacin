@@ -65,8 +65,7 @@ class BasicAlgorithm(BaseAlgorithm):
     @staticmethod
     def filter_result(results):
         """Filter the best suitable result from all the results"""
-        results.sort(reverse=True)
-        final_res = results[0]
+        final_res = min(results, key=len)  # finds the smallest list by len()
         return final_res
 
     def deep_with_startswith(self, text_stuff, burden, results):
