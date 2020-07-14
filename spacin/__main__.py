@@ -51,10 +51,10 @@ def main(args=None):
     )
 
     args = argparser.parse_args()
-    if (not any([args.input_str, args.text])):
+    if not any([args.input_str, args.text]):
         argparser.print_help()
         sys.exit(1)
-    elif (all([args.input_str, args.text])):
+    elif all([args.input_str, args.text]):
         argparser.print_help()
         sys.exit(1)
     else:
