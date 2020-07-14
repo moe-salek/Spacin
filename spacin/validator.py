@@ -1,3 +1,6 @@
+"""The goal of this module is to discover and format bad-input-strings!"""
+
+
 class Validator:
     """Class to validate input"""
 

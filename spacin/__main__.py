@@ -1,8 +1,10 @@
+"""This is Spacin entrypoint!"""
+
 import sys
 
 
 def main(args=None):
-    """Project entrypoint"""
+    """Project entrypoint function"""
     if args is None:
         args = sys.argv[1:]
 
