@@ -57,6 +57,13 @@ class TestBasicAlgorithm(unittest.TestCase):
 
         self.assertListEqual(final_res, ["hello", "friends"])
 
+    def test_filter_result_empty_arg(self):
+        """Test if it works with given empty parameter"""
+        results = []
+        final_res = self.algorithm.filter_result(results)
+
+        self.assertListEqual(final_res, [])
+
     def test_deep_with_startswith(self):
         """Test to find correct ways of creating string with its components"""
         text = self.algorithm.validator.clear_input("hell")

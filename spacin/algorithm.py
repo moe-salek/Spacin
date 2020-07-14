@@ -65,6 +65,8 @@ class BasicAlgorithm(BaseAlgorithm):
     @staticmethod
     def filter_result(results):
         """Filter the best suitable result from all the results"""
+        if not results:
+            return []
         final_res = min(results, key=len)  # finds the smallest list by len()
         return final_res
 

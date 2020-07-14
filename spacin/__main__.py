@@ -50,22 +50,27 @@ def main(args=None):
         help='run with selected algorithm',
     )
 
-    args = argparser.parse_args()
-    if not any([args.input_str, args.text]):
-        argparser.print_help()
+    try:
+        args = argparser.parse_args()
+        if not any([args.input_str, args.text]):
+            argparser.print_help()
+            sys.exit(1)
+        elif all([args.input_str, args.text]):
+            argparser.print_help()
+            sys.exit(1)
+        else:
+            input_str = args.input_str if args.input_str else args.text
+            algo = BasicAlgorithm()
+            print(f"algorithm:\t{algo}\ninput:\t{input_str}")
+            print("processing...", end=' ', flush=True)
+            res = Spacin.run(algo, input_str)
+            print("done!\n")
+            print(f"as a sentence:\t\"{' '.join(res)}\"")
+            print(f"as a list:\t{res}")
+    except argparse.ArgumentTypeError as arge:
+        print('\n\nan argument error occured:', arge)
+        print('enter "spacin -h" for help')
         sys.exit(1)
-    elif all([args.input_str, args.text]):
-        argparser.print_help()
-        sys.exit(1)
-    else:
-        input_str = args.input_str if args.input_str else args.text
-        algo = BasicAlgorithm()
-        print(f"algorithm:\t{algo}\ninput:\t{input_str}")
-        print("processing...", end=' ')
-        res = Spacin.run(algo, input_str)
-        print("done!\n")
-        print(f"as a sentence:\t\"{' '.join(res)}\"")
-        print(f"as a list:\t{res}")
 
 
 if __name__ == "__main__":
