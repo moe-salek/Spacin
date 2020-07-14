@@ -46,7 +46,7 @@ class BasicAlgorithm(BaseAlgorithm):
     def string_breaker(self, input_str):
         """Break input string into a set of the string components"""
         result = set()
-        for word in self.wordlists["wordlist_popular_20k.txt"]:
+        for word in next(iter(self.wordlists.values())):
             if word in input_str:
                 result.add(word)
         return result
