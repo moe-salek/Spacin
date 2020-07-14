@@ -67,5 +67,6 @@ def main(args=None):
         print(f"as a sentence:\t\"{' '.join(res)}\"")
         print(f"as a list:\t{res}")
 
+
 if __name__ == "__main__":
     main()
