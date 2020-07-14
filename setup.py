@@ -6,6 +6,6 @@ setup(
     version='0.1',
     author='Mohammad Salek',
     url='https://gitlab.com/mohammadsalek/spacin',
-    packages=['spacin'],
+    packages=['spacin', 'data'],
     entry_points={'console_scripts': ['spacin = spacin.__main__:main']},
 )
