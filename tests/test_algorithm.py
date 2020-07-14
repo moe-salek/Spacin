@@ -7,9 +7,11 @@ class TestBaseAlgorithm(unittest.TestCase):
     """Test the Base Algorithm abstract class"""
 
     def test_str(self):
-        """Test str"""
+        """Test __str__ function"""
         algorithm = BaseAlgorithm()
-        print(algorithm)
+
+        self.assertEqual('BaseAlgorithm', algorithm.__str__())
+
 
 class TestBasicAlgorithm(unittest.TestCase):
     """Test functionality of Basic Algorithm"""
