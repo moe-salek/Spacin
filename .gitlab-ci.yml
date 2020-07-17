@@ -9,6 +9,7 @@ before_script:
   - pip install -U pip
   - pip --cache-dir=.pip-cache install flake8
   - pip --cache-dir=.pip-cache install pylint
+  - pip install .
 
 stages:
   - Static Analysis
