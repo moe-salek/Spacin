@@ -14,14 +14,17 @@ def main(args=None):
     """Project entrypoint function"""
 
     argparser = argparse.ArgumentParser(
-        description="""\r\tSpacin, puts space in!\n\n
+        description="""\r
+        \r-----------------------------
+        \r Spacin, puts space between!
+        \r-----------------------------\n\n
         \rSpacin is a word-separator that distinguishes
         \reach word in a given string.\n
         \rexample:
         \r> spacin "hellofriend"
         \r...
-        \ras a sentence:    "hello friend"
-        \ras a list:        ['hello', 'friend']
+        \ras a sentence:		"hello friend"
+        \ras separate words:	['hello', 'friend']
         """,
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent(
