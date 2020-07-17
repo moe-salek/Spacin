@@ -11,7 +11,7 @@ class TestLoader(unittest.TestCase):
         self.data_dir = "./data"
 
     def test_files_exist_in_data_dir(self):
-        """Test data dir is not empty"""
+        """Test data dir is not empty and wordlists exist"""
         loader = Loader()
         wordlist_dict = loader.get_db_wordlists()
 
