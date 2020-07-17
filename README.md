@@ -8,10 +8,14 @@ You need Python 3.6 or later to run spacin. Install Python from [here](https://w
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install spacin.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install spacin:
 
 ```bash
 pip install spacin
+```
+or you can download the project from repository and from project's root directory install it:
+```bash
+pip install .
 ```
 
 ## Usage
