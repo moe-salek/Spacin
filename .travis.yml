@@ -1,0 +1,26 @@
+language: python
+python:
+  # - "2.7"
+  # - "3.4"
+  # - "3.5"
+  # - "3.6"
+  # - "3.7"
+  - "3.8"
+
+install:
+  - pip install flake8
+  - pip install pylint
+  - pip install .
+
+jobs:
+  include:
+    - stage: "Static Analysis"
+      name: "Flake8"
+      script: flake8
+
+    - name: "Pylint"
+      script: pylint spacin/
+
+    - name: "Unit Testing"
+      stage: "unit test"
+      script: python -m unittest discover
