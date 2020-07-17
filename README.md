@@ -1,4 +1,4 @@
-# Spacin
+# Spacin  [![Build Status](https://travis-ci.org/MohammadSalek/Spacin.svg?branch=master)](https://travis-ci.org/MohammadSalek/Spacin)
 "Spacin, puts space between!"
 
 Spacin is a word-separator that distinguishes each word in a given string.
