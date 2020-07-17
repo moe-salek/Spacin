@@ -59,7 +59,7 @@ class BasicAlgorithm(BaseAlgorithm):
         components = [
             comp
             for comp in components
-            if len(comp) != 1 or comp in ("a", "an", "i")
+            if len(comp) != 1 or comp in ("a", "i")
         ]
         return components
 
